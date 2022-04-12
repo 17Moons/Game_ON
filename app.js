@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true});
+mongoose.connect("mongodb://vs-45:m21phone@cluster0-shard-00-00.8batv.mongodb.net:27017,cluster0-shard-00-01.8batv.mongodb.net:27017,cluster0-shard-00-02.8batv.mongodb.net:27017/blogDB?ssl=true&replicaSet=atlas-rc6iiq-shard-0&authSource=admin&retryWrites=true&w=majority", {useNewUrlParser: true});
 
 const postSchema = {
   title: String,
